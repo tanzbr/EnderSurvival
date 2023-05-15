@@ -1,0 +1,15 @@
+name: EnderSurvival
+author: Caua (Needev)
+version: 1.0
+main: dev.caua.endersurvival.EnderSurvival
+api-version: 1.19
+softdepend: [ViaVersion, Votifier]
+
+commands:
+  resettheend:
+  executarvipextra:
+  broadcast:
+    aliases: [ bc, aviso, avisar ]
+  bcgold:
+  vote:
+    aliases: [votar]

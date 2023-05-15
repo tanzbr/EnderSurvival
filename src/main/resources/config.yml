@@ -1,0 +1,39 @@
+# EnderSurvival by Needev
+
+# Coloque aqui o mundo do spawn
+MundoSpawn: "MundoSpawn"
+MundoEnd: "MundoSurvival_end"
+
+# Sistema de enviar coordenadas ao morrer
+DeathCordinates: true
+
+VotesLinks:
+  - "§f1. §ahttps://link.com"
+
+#VIP EXTRA
+chance: 1 # em %
+comando: "enviarchave {player} {vip} 30"
+
+#Mensagem ao entrar no servidor
+JoinMessages:
+  - ""
+  - "<center>&5&lEnder&f&lCraft"
+  - "<center>&7Seja bem-vindo ao &aSurvival"
+  - ""
+  - " &a&l➜ &7No momento temos &a<players> jogadores &7online."
+  - " &a&l➜ &7Use &a/jogar &7para começar sua jornada."
+  - " &a&l➜ &7Use &a/kits &7para receber alguns itens."
+  - " &a&l➜ &7Use &a/teleportes &7para ver os locais do servidor."
+  - " &a&l➜ &7Use &a/arena &7para batalhar."
+  - " &a&l➜ &7Use &a/loja &7para comprar e vender itens."
+  - " &a&l➜ &7Use &a/ajuda &7para ver a ajuda completa."
+  - " &a&l➜ &7Vote no servidor e ganhe &a500 coins &7e &a3 diamantes&7. (/vote)"
+  - ""
+
+# AUTO BROADCAST
+AutoBroadcast:
+  ativar: true
+  random: true
+  delay: 5 # em minutos
+  mensagens:
+    - '&7[&b!&7] &7Está perdido? Para voltar ao spawn use &b/spawn'
