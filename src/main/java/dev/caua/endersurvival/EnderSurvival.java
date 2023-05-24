@@ -6,6 +6,7 @@ import dev.caua.endersurvival.commands.ExecuteExtraVIP;
 import dev.caua.endersurvival.commands.ResetTheEnd;
 import dev.caua.endersurvival.commands.VoteCommand;
 import dev.caua.endersurvival.events.PlayerDeath;
+import dev.caua.endersurvival.events.PlayerInteract;
 import dev.caua.endersurvival.events.PlayerLoginEvent;
 import dev.caua.endersurvival.events.PortalEvent;
 import dev.caua.endersurvival.files.VotePartyFile;
@@ -48,7 +49,7 @@ public class EnderSurvival extends JavaPlugin {
     }
 
     public void onDisable() {
-
+        voteParty.saveVotes();
         Bukkit.getConsoleSender().sendMessage("§a[EnderSurvival] §fPlugin desligado com sucesso.");
     }
 
@@ -76,6 +77,7 @@ public class EnderSurvival extends JavaPlugin {
         }
         Bukkit.getPluginManager().registerEvents(new PlayerLoginEvent(), this);
         Bukkit.getPluginManager().registerEvents(new PortalEvent(), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerInteract(), this);
     }
 
     public static EnderSurvival getInstance() {return instance;}
