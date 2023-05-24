@@ -15,18 +15,6 @@ import java.util.regex.Pattern;
 
 public class PlayerLoginEvent implements Listener {
 
-    @EventHandler
-    public void joinMessage(org.bukkit.event.player.PlayerJoinEvent e) {
-        Player p = e.getPlayer();
-        e.setJoinMessage(null);
-        for (String message : EnderSurvival.getInstance().getConfig().getStringList("JoinMessages")) {
-            if (message.contains("<center>")) {
-                p.sendMessage(centerText(message.replaceAll("&", "§").replace("<center>", "").replaceAll("<players>", String.valueOf(Bukkit.getOnlinePlayers().size()))));
-            } else {
-                p.sendMessage(message.replaceAll("&", "§").replaceAll("<players>", String.valueOf(Bukkit.getOnlinePlayers().size())));
-            }
-        }
-    }
 
     @EventHandler
     public void quit(PlayerQuitEvent e) {
