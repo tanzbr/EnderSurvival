@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-public class onPortalEvent implements Listener {
+public class PortalEvent implements Listener {
 
     private HashMap<Player, Long> cooldown = new HashMap<>();
 

@@ -6,7 +6,7 @@ import dev.caua.endersurvival.EnderSurvival;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-public class voteReceived implements Listener {
+public class VoteReceived implements Listener {
 
     @EventHandler
     public void onVotifierEvent(VotifierEvent event) {

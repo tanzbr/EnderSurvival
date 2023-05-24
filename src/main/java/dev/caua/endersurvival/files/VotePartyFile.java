@@ -8,12 +8,12 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
-public class votePartyFile {
+public class VotePartyFile {
 
     private File file;
     private FileConfiguration fileConfiguration;
 
-    public votePartyFile() {
+    public VotePartyFile() {
         file = new File(EnderSurvival.getInstance().getDataFolder(), "voteparty.yml");
         fileConfiguration = YamlConfiguration.loadConfiguration(file);
         if (!file.exists()) {

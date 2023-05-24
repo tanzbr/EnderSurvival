@@ -5,7 +5,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
-public class voteParty {
+public class VoteParty {
 
     int sec = 30;
     int votes;
@@ -21,8 +21,8 @@ public class voteParty {
     public void addVote() {
         ++votes;
         Bukkit.getConsoleSender().sendMessage("§b§l[Votos] §fVote party atual: " + votes);
-        String cmd = "tm abroadcast &d&lVote Party: &a" +votes+ "/50";
-        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmd);
+        //String cmd = "tm abroadcast &d&lVote Party: &a" +votes+ "/50";
+        //Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmd);
         if (votes == 50) {
             startDrop();
             votes = 0;
@@ -55,11 +55,11 @@ public class voteParty {
     // DROP SYSTEM
 
     public void startDrop(){
-        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "tm bc &d&lVote Party<nl>&aConcluída!");
-        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "crate key give * basica 1");
+        //Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "tm bc &d&lVote Party<nl>&aConcluída!");
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "crate key give * lendaria 1");
         Bukkit.broadcastMessage("");
         Bukkit.broadcastMessage(" §d§lVOTE PARTY CONCLUIDA!");
-        Bukkit.broadcastMessage(" §fTodos os jogadores online receberam uma caixa §eBásica§f!");
+        Bukkit.broadcastMessage(" §fTodos os jogadores online receberam uma caixa §6Lendária§f!");
         Bukkit.broadcastMessage("");
     }
 

@@ -39,7 +39,7 @@ public class VoteCommand implements CommandExecutor {
                 p.sendMessage(" §d§lVote Party");
                 p.sendMessage(" §fAo atingir 50 votos no servidor,");
                 p.sendMessage(" §fa vote party será iniciada,");
-                p.sendMessage(" §fdando uma caixa básica a todos online.");
+                p.sendMessage(" §fdando uma caixa lendária a todos online.");
                 p.sendMessage("");
                 p.sendMessage("§fVote Party atual: §a" + EnderSurvival.getVoteParty().getVotes() + "/50");
                 p.sendMessage("");

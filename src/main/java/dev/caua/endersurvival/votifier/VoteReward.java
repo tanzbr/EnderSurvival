@@ -1,12 +1,10 @@
 package dev.caua.endersurvival.votifier;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 
-public class voteReward {
+public class VoteReward {
 
     public void giveReward(String username, String service){
         if(Bukkit.getPlayer(username) == null) {
@@ -19,7 +17,7 @@ public class voteReward {
         if (p.getWorld() != Bukkit.getWorld("Eventos")) {
             Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "crate key give " + username + " basica 1");
         } else {
-            p.sendMessage("§cVocê não recebeu a chave basica do voto, pois está em um evento.");
+            p.sendMessage("§cVocê não recebeu a chave basica do voto, pois está em um lugar não permitido.");
         }
         p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
     }

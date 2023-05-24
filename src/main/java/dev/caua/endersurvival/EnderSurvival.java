@@ -7,12 +7,12 @@ import dev.caua.endersurvival.commands.ResetTheEnd;
 import dev.caua.endersurvival.commands.VoteCommand;
 import dev.caua.endersurvival.events.PlayerDeath;
 import dev.caua.endersurvival.events.PlayerLoginEvent;
-import dev.caua.endersurvival.events.onPortalEvent;
-import dev.caua.endersurvival.files.votePartyFile;
+import dev.caua.endersurvival.events.PortalEvent;
+import dev.caua.endersurvival.files.VotePartyFile;
 import dev.caua.endersurvival.utils.VersionDetector;
-import dev.caua.endersurvival.votifier.voteParty;
-import dev.caua.endersurvival.votifier.voteReceived;
-import dev.caua.endersurvival.votifier.voteReward;
+import dev.caua.endersurvival.votifier.VoteParty;
+import dev.caua.endersurvival.votifier.VoteReceived;
+import dev.caua.endersurvival.votifier.VoteReward;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -22,9 +22,9 @@ public class EnderSurvival extends JavaPlugin {
     public static AutoMessage autoMessage;
     public static VersionDetector versionDetector;
 
-    private static dev.caua.endersurvival.votifier.voteReward voteReward;
-    private static dev.caua.endersurvival.votifier.voteParty voteParty;
-    private static votePartyFile votePartyFile;
+    private static VoteReward voteReward;
+    private static VoteParty voteParty;
+    private static VotePartyFile votePartyFile;
 
     public void onEnable() {
         instance = this;
@@ -36,9 +36,9 @@ public class EnderSurvival extends JavaPlugin {
             versionDetector = new VersionDetector();
         }
         if (Bukkit.getPluginManager().isPluginEnabled("Votifier")) {
-            votePartyFile = new votePartyFile();
-            voteReward = new voteReward();
-            voteParty = new voteParty();
+            votePartyFile = new VotePartyFile();
+            voteReward = new VoteReward();
+            voteParty = new VoteParty();
             voteParty.setupVotes();
         }
         loadConfig();
@@ -48,6 +48,7 @@ public class EnderSurvival extends JavaPlugin {
     }
 
     public void onDisable() {
+
         Bukkit.getConsoleSender().sendMessage("§a[EnderSurvival] §fPlugin desligado com sucesso.");
     }
 
@@ -68,18 +69,18 @@ public class EnderSurvival extends JavaPlugin {
             Bukkit.getPluginManager().registerEvents(versionDetector, this);
         }
         if (Bukkit.getPluginManager().isPluginEnabled("Votifier")) {
-            Bukkit.getPluginManager().registerEvents(new voteReceived(), this);
+            Bukkit.getPluginManager().registerEvents(new VoteReceived(), this);
         }
         if (getConfig().getBoolean("DeathCordinates")) {
             Bukkit.getPluginManager().registerEvents(new PlayerDeath(), this);
         }
         Bukkit.getPluginManager().registerEvents(new PlayerLoginEvent(), this);
-        Bukkit.getPluginManager().registerEvents(new onPortalEvent(), this);
+        Bukkit.getPluginManager().registerEvents(new PortalEvent(), this);
     }
 
     public static EnderSurvival getInstance() {return instance;}
-    public static votePartyFile getVotePartyFile() { return votePartyFile; }
-    public static voteReward getVoteReward() {return voteReward;}
-    public static voteParty getVoteParty() {return voteParty;}
+    public static VotePartyFile getVotePartyFile() { return votePartyFile; }
+    public static VoteReward getVoteReward() {return voteReward;}
+    public static VoteParty getVoteParty() {return voteParty;}
 
 }
