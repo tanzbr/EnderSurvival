@@ -26,6 +26,7 @@ public class PlayerDeath implements Listener {
             @Override
             public void run() {
                 p.sendMessage("§6Suas coordenadas de morte: §fX: §e" + Math.round(deathloc.getX()) + " §fY: §e" + Math.round(deathloc.getY()) + " §fZ: §e" +Math.round(deathloc.getZ()));
+                p.sendMessage("§7VIPs podem voltar ao local de morte usando /back.");
                 p.sendMessage("§8Caso a chunk esteja carregada, seus itens sumirão em 5 minutos.");
                 this.cancel();
             }
