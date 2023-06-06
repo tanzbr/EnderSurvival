@@ -1,10 +1,8 @@
 package dev.caua.endersurvival;
 
 import dev.caua.endersurvival.automessage.AutoMessage;
-import dev.caua.endersurvival.commands.BroadCastCommand;
-import dev.caua.endersurvival.commands.ExecuteExtraVIP;
-import dev.caua.endersurvival.commands.ResetTheEnd;
-import dev.caua.endersurvival.commands.VoteCommand;
+import dev.caua.endersurvival.commands.*;
+import dev.caua.endersurvival.customitems.NamoradosItens;
 import dev.caua.endersurvival.events.PlayerDeath;
 import dev.caua.endersurvival.events.PlayerInteract;
 import dev.caua.endersurvival.events.PlayerLoginEvent;
@@ -64,6 +62,8 @@ public class EnderSurvival extends JavaPlugin {
         getCommand("broadcast").setExecutor(new BroadCastCommand());
         getCommand("bcgold").setExecutor(new BroadCastCommand());
         getCommand("executarvipextra").setExecutor(new ExecuteExtraVIP());
+        getCommand("announce").setExecutor(new AnnounceCommand());
+        getCommand("giveitemnamorados").setExecutor(new NamoradosItens());
     }
     public void registrarEventos() {
         if (Bukkit.getPluginManager().isPluginEnabled("ViaVersion")) {

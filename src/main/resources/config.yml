@@ -4,6 +4,8 @@
 MundoSpawn: "MundoSpawn"
 MundoEnd: "MundoSurvival_end"
 
+PrefixBroadCast: ""
+PrefixBroadCastGold: ""
 # Sistema de enviar coordenadas ao morrer
 DeathCordinates: true
 

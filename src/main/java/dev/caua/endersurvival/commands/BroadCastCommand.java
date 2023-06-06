@@ -47,7 +47,7 @@ public class BroadCastCommand implements CommandExecutor {
                 for (int i = 0; i != args.length; i++) message += args[i] + " ";
                 String prefix = EnderSurvival.getInstance().getConfig().getString("PrefixBroadCast").replace("&", "§");
                 Bukkit.broadcastMessage("");
-                Bukkit.broadcastMessage(prefix + message.replace("&", "§"));
+                Bukkit.broadcastMessage(me.caua.endercraft.enderutils.utils.ColorTranslate.chatColors(prefix + message));
                 Bukkit.broadcastMessage("");
                 return true;
             } else if (cmd.getName().equalsIgnoreCase("bcgold")) {
@@ -59,7 +59,7 @@ public class BroadCastCommand implements CommandExecutor {
                 for (int i = 0; i != args.length; i++) message += args[i] + " ";
                 String prefix = EnderSurvival.getInstance().getConfig().getString("PrefixBroadCastGold").replace("&", "§");
                 Bukkit.broadcastMessage("");
-                Bukkit.broadcastMessage(prefix + message.replace("&", "§"));
+                Bukkit.broadcastMessage(me.caua.endercraft.enderutils.utils.ColorTranslate.chatColors(prefix + message));
                 Bukkit.broadcastMessage("");
                 return true;
             }

@@ -6,7 +6,9 @@ api-version: 1.19
 softdepend: [ViaVersion, Votifier]
 
 commands:
+  giveitemnamorados:
   resettheend:
+  announce:
   executarvipextra:
   broadcast:
     aliases: [ bc, aviso, avisar ]
