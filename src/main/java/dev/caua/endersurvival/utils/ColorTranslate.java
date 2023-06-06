@@ -1,4 +1,4 @@
-package me.caua.endercraft.enderutils.utils;
+package dev.caua.endersurvival.utils;
 
 import net.md_5.bungee.api.ChatColor;
 

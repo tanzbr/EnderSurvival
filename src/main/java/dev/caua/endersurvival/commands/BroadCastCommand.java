@@ -1,6 +1,7 @@
 package dev.caua.endersurvival.commands;
 
 import dev.caua.endersurvival.EnderSurvival;
+import dev.caua.endersurvival.utils.ColorTranslate;
 import org.bukkit.Bukkit;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
@@ -47,7 +48,7 @@ public class BroadCastCommand implements CommandExecutor {
                 for (int i = 0; i != args.length; i++) message += args[i] + " ";
                 String prefix = EnderSurvival.getInstance().getConfig().getString("PrefixBroadCast").replace("&", "§");
                 Bukkit.broadcastMessage("");
-                Bukkit.broadcastMessage(me.caua.endercraft.enderutils.utils.ColorTranslate.chatColors(prefix + message));
+                Bukkit.broadcastMessage(ColorTranslate.chatColors(prefix + message));
                 Bukkit.broadcastMessage("");
                 return true;
             } else if (cmd.getName().equalsIgnoreCase("bcgold")) {
@@ -59,7 +60,7 @@ public class BroadCastCommand implements CommandExecutor {
                 for (int i = 0; i != args.length; i++) message += args[i] + " ";
                 String prefix = EnderSurvival.getInstance().getConfig().getString("PrefixBroadCastGold").replace("&", "§");
                 Bukkit.broadcastMessage("");
-                Bukkit.broadcastMessage(me.caua.endercraft.enderutils.utils.ColorTranslate.chatColors(prefix + message));
+                Bukkit.broadcastMessage(ColorTranslate.chatColors(prefix + message));
                 Bukkit.broadcastMessage("");
                 return true;
             }

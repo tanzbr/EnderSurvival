@@ -2,7 +2,6 @@ package dev.caua.endersurvival.events;
 
 import dev.caua.endersurvival.EnderSurvival;
 import net.md_5.bungee.api.chat.TextComponent;
-import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -21,10 +20,11 @@ public class PlayerLoginEvent implements Listener {
         e.setQuitMessage(null);
     }
 
+    /*
     private String centerText(String text) {
         int maxWidth = 80,
                 spaces = (int) Math.round((maxWidth-1.4* ChatColor.stripColor(text).length())/2);
         return StringUtils.repeat(" ", spaces)+text;
-    }
+    }*/
 
 }

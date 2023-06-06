@@ -29,6 +29,7 @@ public class VersionDetector implements Listener {
         exec = new BukkitRunnable() {
             @Override
             public void run() {
+                if (p == null) return;
                 int version = api.getPlayerVersion(p);
                 if (version != 762) {
                     p.playSound(p.getLocation(), Sound.ENTITY_VILLAGER_NO, 0, 0);
